@@ -54,7 +54,7 @@ npm run start
 **Server:** Node.js: For running the server.
             WHOIS API: For fetching WHOIS data.
 
-##Usage
+## Usage
 
 **Performing a WHOIS Lookup**
 
