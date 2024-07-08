@@ -20,7 +20,7 @@ Navigate to the project directory:
 
 Copy code
 ```
-cd site-lookup
+cd whoistesting
 ```
 
 Create a .env file inside whoistesting folder and copy this values
