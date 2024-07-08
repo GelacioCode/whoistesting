@@ -1,0 +1,263 @@
+@import '~bootstrap/scss/bootstrap';
+
+//landing page
+
+.landing-section {
+  height: 100vh;
+  background-image: url('../../public/background.jpg'); /* Update the path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  color: #1f79ab;
+}
+
+.content h1 {
+  font-size: 10rem;
+  margin-bottom: 1rem;
+}
+
+.content span {
+  font-size: 10rem;
+  color: white;
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.arrow-container {
+  cursor: pointer;
+  margin-top: 10rem;
+}
+
+.arrow {
+  width: 60px;
+  height: 60px;
+  border-left: 5px solid white;
+  border-bottom: 5px solid white;
+  transform: rotate(-45deg);  /* Rotate 45 degrees to point downwards */
+  animation: bounce 2s infinite;
+  margin: auto;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(-45deg); /* Maintain rotation in keyframes */
+  }
+  40% {
+    transform: translateY(-10px) rotate(-45deg); /* Maintain rotation in keyframes */
+  }
+  60% {
+    transform: translateY(-5px) rotate(-45deg); /* Maintain rotation in keyframes */
+  }
+}
+
+.buttons .btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+#second-section {
+  height: 100vh;
+  color: #ccc; 
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: #555;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.section-title {
+  color: #0db9f0; 
+  margin-bottom: 20px; 
+}
+
+.alert {
+  background-color: #ff4d4f; 
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button, .btn {
+  background-color: #0db9f0;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #1f79ab;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #second-section {
+    padding: 20px;
+    height: auto;  // Makes the section more flexible on smaller screens
+  }
+
+  .form-control, .form-select {
+    font-size: 14px;  // Smaller font size for better fit
+  }
+
+  .footer {
+    padding: 10px 0;
+  }
+
+  .content h1{
+    font-size: 4rem;  // Smaller headings on mobile devices
+  }
+
+  .content span{
+    font-size: 4rem;  // Smaller headings on mobile devices
+  }
+
+}
+
+.form-control, .form-select {
+  color: black;
+  border: 1px solid #555;
+  &:focus {
+    border-color: #0db9f0;
+    box-shadow: 0 0 5px rgba(13, 185, 240, 0.5);
+  }
+}
+
+.btn-primary {
+  background-color: #0db9f0;
+  border-color: #0598c9;
+  &:hover {
+    background-color: #0598c9;
+    border-color: #017c9e;
+  }
+}
+
+#card{
+  height: 60%;
+}
+
+footer {
+  background-color: #222;  // Dark background for the footer
+  color: #ccc;            // Light text color for contrast
+  padding: 20px 0;        // Padding for top and bottom
+  margin-top: auto;       // Pushes the footer to the bottom of the viewport if the content is short
+  font-size: 0.9rem;      // Smaller font size for footer text
+}
+
+.footer-link {
+  color: #0db9f0;
+  &:hover {
+    color: #0598c9;
+  }
+}
+
+//Whois domain search result::after
+
+.table-responsive {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.table {
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table-bordered th, .table-bordered td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.hostname-truncate {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  color:#222;
+  border-radius: 8px;
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+// @media (max-width: 768px) {
+//   .table-responsive {
+//     overflow-x: auto;
+//   }
+
+//   .table th, .table td {
+//     white-space: nowrap;
+//   }
+// }
